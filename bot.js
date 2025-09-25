@@ -15,7 +15,7 @@ bot.start(async (ctx) => {
     chatId: ctx.chat.id,
     tgName: ctx.chat.username,
   };
-  const user = await getUser(chatId);
+  const user = await getUser(ctx.chat.id,);
   if (user) {
     sendVoiceMessage(
       ctx,
